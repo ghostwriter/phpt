@@ -117,6 +117,9 @@
         "ecs": "@bin_ecs --fix",
         "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
         "infection": "@bin_infection",
+        "phpt": [
+            "@php bin/phpt"
+        ],
         "phpunit": "@bin_phpunit",
         "phpunit:migrate": "@bin_phpunit --migrate-configuration",
         "psalm": "@bin_psalm --show-info=true",
