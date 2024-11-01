@@ -6,7 +6,7 @@ declare(strict_types=1);
 namespace Ghostwriter\Phpt\Console;
 
 use ErrorException;
-use Ghostwriter\Phpt\Foo;
+use Ghostwriter\Phpt\Application;
 
 use const DIRECTORY_SEPARATOR;
 use const STDERR;
@@ -34,6 +34,6 @@ use function set_error_handler;
      * #BlackLivesMatter.
      */
     exit(
-        Foo::new()->run($_SERVER['argv'])
+        Application::new()->run($_SERVER['argv'])
     );
 })($_composer_autoload_path ?? dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php');
