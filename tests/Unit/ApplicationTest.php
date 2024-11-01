@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Unit;
 
 use Generator;
-use Ghostwriter\Phpt\Foo;
-use Ghostwriter\Phpt\Interface\FooExceptionInterface;
-use Ghostwriter\Phpt\Interface\FooInterface;
+use Ghostwriter\Phpt\Application;
+use Ghostwriter\Phpt\Interface\ApplicationInterface;
+use Ghostwriter\Phpt\Interface\ExceptionInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
@@ -15,8 +15,8 @@ use Throwable;
 
 use function is_a;
 
-#[CoversClass(Foo::class)]
-final class FooTest extends TestCase
+#[CoversClass(Application::class)]
+final class ApplicationTest extends TestCase
 {
     /**
      * @throws Throwable
@@ -26,7 +26,7 @@ final class FooTest extends TestCase
     {
         self::assertSame($value, $value);
 
-        self::assertTrue(Foo::new()->test());
+        self::assertSame(0, Application::new()->run());
     }
 
     /**
@@ -34,8 +34,8 @@ final class FooTest extends TestCase
      */
     public function testImplementsInterface(): void
     {
-        self::assertTrue(is_a(Foo::class, FooInterface::class, true));
-        self::assertTrue(is_a(FooExceptionInterface::class, Throwable::class, true));
+        self::assertTrue(is_a(Application::class, ApplicationInterface::class, true));
+        self::assertTrue(is_a(ExceptionInterface::class, Throwable::class, true));
     }
 
     /**
