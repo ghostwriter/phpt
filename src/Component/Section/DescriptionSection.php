@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Section;
-
-use Ghostwriter\Phpt\Interface\Section\DescriptionSectionInterface;
+namespace Ghostwriter\Phpt\Component\Section;
 
 final class DescriptionSection implements DescriptionSectionInterface
 {
