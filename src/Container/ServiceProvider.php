@@ -6,10 +6,10 @@ namespace Ghostwriter\Phpt\Container;
 
 use Ghostwriter\Container\Interface\ContainerInterface;
 use Ghostwriter\Container\Interface\ServiceProviderInterface;
+use Override;
 
 final readonly class ServiceProvider implements ServiceProviderInterface
 {
-    public function __invoke(ContainerInterface $container): void
-    {
-    }
+    #[Override]
+    public function __invoke(ContainerInterface $container): void {}
 }
