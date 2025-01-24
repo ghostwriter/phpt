@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Section;
 
-use Ghostwriter\Phpt\Section\SkipIfSection;
+use Ghostwriter\Phpt\Component\Section\SkipIfSection;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
