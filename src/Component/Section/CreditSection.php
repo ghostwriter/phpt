@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Section;
-
-use Ghostwriter\Phpt\Interface\Section\CreditSectionInterface;
+namespace Ghostwriter\Phpt\Component\Section;
 
 final class CreditSection implements CreditSectionInterface
 {
