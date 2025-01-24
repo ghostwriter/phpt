@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\File;
-
-use Ghostwriter\Phpt\Interface\File\DiffFileInterface;
+namespace Ghostwriter\Phpt\Component\File;
 
 final class DiffFile implements DiffFileInterface
 {
