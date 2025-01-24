@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Container\ServiceProvider;
+namespace Tests\Unit\Container;
 
 use Ghostwriter\Container\Interface\ServiceProviderInterface;
 use Ghostwriter\Phpt\Container\ServiceProvider;
