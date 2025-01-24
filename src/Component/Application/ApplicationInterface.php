@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Interface;
+namespace Ghostwriter\Phpt\Component\Application;
 
 interface ApplicationInterface
 {
