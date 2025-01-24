@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Section;
-
-use Ghostwriter\Phpt\Interface\Section\SkipIfSectionInterface;
+namespace Ghostwriter\Phpt\Component\Section;
 
 final class SkipIfSection implements SkipIfSectionInterface
 {
