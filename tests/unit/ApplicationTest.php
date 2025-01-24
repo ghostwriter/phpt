@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Unit;
 
 use Generator;
-use Ghostwriter\Phpt\Application;
-use Ghostwriter\Phpt\Interface\ApplicationInterface;
-use Ghostwriter\Phpt\Interface\ExceptionInterface;
+use Ghostwriter\Phpt\Component\Application\Application;
+use Ghostwriter\Phpt\Component\Application\ApplicationInterface;
+use Ghostwriter\Phpt\ExceptionInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
@@ -22,11 +22,9 @@ final class ApplicationTest extends TestCase
      * @throws Throwable
      */
     #[DataProvider('dataProvider')]
-    public function testExample(bool $value): void
+    public function testExample(int $exitCode, array $arguments = []): void
     {
-        self::assertSame($value, $value);
-
-        self::assertSame(0, Application::new()->run());
+        self::assertSame($exitCode, Application::new()->run($arguments));
     }
 
     /**
@@ -44,8 +42,9 @@ final class ApplicationTest extends TestCase
     public static function dataProvider(): Generator
     {
         yield from [
-            'true' => [true],
-            'false' => [false],
+            'true' => [0, ['--help']],
+            'false' => [0, ['--version']],
+            'argv' => [0, $_SERVER['argv']],
         ];
     }
 }
