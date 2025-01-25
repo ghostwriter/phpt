@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace Ghostwriter\Phpt\Component\Test\TestCase;
 
-use Ghostwriter\Phpt\Component\Section\TestSectionInterface;
+use Ghostwriter\Phpt\Component\Section\TestInterface;
 use Override;
 
 final readonly class PhptTestCase implements PhptTestCaseInterface
 {
     public function __construct(
-        private TestSectionInterface $testSection,
+        private TestInterface $test,
         private iterable $sections,
     ) {}
 
     #[Override]
-    public static function new(TestSectionInterface $testSection, iterable $sections): self
+    public static function new(TestInterface $test, iterable $sections): self
     {
-        return new self($testSection, $sections);
+        return new self($test, $sections);
     }
 
     #[Override]
@@ -27,8 +27,8 @@ final readonly class PhptTestCase implements PhptTestCaseInterface
     }
 
     #[Override]
-    public function testSection(): TestSectionInterface
+    public function testSection(): TestInterface
     {
-        return $this->testSection;
+        return $this->test;
     }
 }
