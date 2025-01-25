@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ghostwriter\Phpt\Component\File;
 
-final class ExpFile implements ExpFileInterface
+final class Log implements LogInterface
 {
     public static function new(): self
     {
