@@ -6,10 +6,10 @@ namespace Tests\Unit\Component\Parser;
 
 use Ghostwriter\Phpt\Component\Parser\Parser;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
 #[CoversClass(Parser::class)]
-final class ParserTest extends TestCase
+final class ParserTest extends AbstractTestCase
 {
     public function testExample(): void
     {
