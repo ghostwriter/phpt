@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ghostwriter\Phpt\Component\File;
 
-use Ghostwriter\Phpt\Component\Section\CreditSectionInterface;
+use Ghostwriter\Phpt\Component\Section\CreditInterface;
 use Ghostwriter\Phpt\Component\Section\SectionInterface;
 use Override;
 use RuntimeException;
@@ -12,7 +12,7 @@ use WeakMap;
 
 use function file_get_contents;
 
-final readonly class PhptFile implements PhptFileInterface
+final readonly class Phpt implements PhptInterface
 {
     /**
      * @var WeakMap<FileInterface,SectionInterface>
@@ -39,21 +39,21 @@ final readonly class PhptFile implements PhptFileInterface
 
     // $test->hasSection('PHPDBG')
     #[Override]
-    public function diffFile(): DiffFileInterface
+    public function diffFile(): DiffInterface
     {
-        return DiffFile::new();
+        return Diff::new();
     }
 
     #[Override]
-    public function expFile(): ExpFileInterface
+    public function expFile(): ExpInterface
     {
-        return ExpFile::new();
+        return Exp::new();
     }
 
     public function hasCreditSection(): bool
     {
         foreach ($this->weakMap as $file => $section) {
-            if (! $section instanceof CreditSectionInterface) {
+            if (! $section instanceof CreditInterface) {
                 continue;
             }
 
@@ -76,7 +76,7 @@ final readonly class PhptFile implements PhptFileInterface
         }
 
         foreach ($this->weakMap as $name => $value) {
-            if ($value instanceof CreditSectionInterface) {
+            if ($value instanceof CreditInterface) {
                 return true;
             }
         }
@@ -85,27 +85,27 @@ final readonly class PhptFile implements PhptFileInterface
     }
 
     #[Override]
-    public function logFile(): LogFileInterface
+    public function logFile(): LogInterface
     {
-        return LogFile::new();
+        return Log::new();
     }
 
     #[Override]
-    public function outFile(): OutFileInterface
+    public function outFile(): OutInterface
     {
-        return OutFile::new();
+        return Out::new();
     }
 
     #[Override]
-    public function phpFile(): PhpFileInterface
+    public function phpFile(): PhpInterface
     {
-        return PhpFile::new();
+        return Php::new();
     }
 
     #[Override]
-    public function shFile(): ShFileInterface
+    public function shFile(): ShInterface
     {
-        return ShFile::new();
+        return Sh::new();
     }
 }
 
