@@ -6,10 +6,10 @@ namespace Tests\Unit\Component\Test\Result;
 
 use Ghostwriter\Phpt\Component\Test\Result\XFailed;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
 #[CoversClass(XFailed::class)]
-final class XFailedTest extends TestCase
+final class XFailedTest extends AbstractTestCase
 {
     public function testExample(): void
     {
