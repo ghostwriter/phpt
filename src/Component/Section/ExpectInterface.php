@@ -4,4 +4,4 @@ declare(strict_types=1);
 
 namespace Ghostwriter\Phpt\Component\Section;
 
-interface CreditSectionInterface extends SectionInterface {}
+interface ExpectInterface extends SectionInterface {}
