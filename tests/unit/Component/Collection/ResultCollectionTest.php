@@ -6,10 +6,10 @@ namespace Tests\Unit\Component\Collection;
 
 use Ghostwriter\Phpt\Component\Collection\ResultCollection;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
 #[CoversClass(ResultCollection::class)]
-final class ResultCollectionTest extends TestCase
+final class ResultCollectionTest extends AbstractTestCase
 {
     public function testExample(): void
     {
