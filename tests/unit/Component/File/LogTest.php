@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\File;
 
-use Ghostwriter\Phpt\Component\File\ExpFile;
+use Ghostwriter\Phpt\Component\File\Log;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
-#[CoversClass(ExpFile::class)]
-final class ExpFileTest extends TestCase
+#[CoversClass(Log::class)]
+final class LogTest extends AbstractTestCase
 {
     public function testExample(): void
     {
