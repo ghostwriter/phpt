@@ -4,4 +4,4 @@ declare(strict_types=1);
 
 namespace Ghostwriter\Phpt\Component\File;
 
-interface ShFileInterface extends FileInterface {}
+interface DiffInterface extends FileInterface {}
