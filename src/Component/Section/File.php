@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ghostwriter\Phpt\Component\Section;
 
-final class ExpectSection implements ExpectSectionInterface
+final class File implements FileInterface
 {
     public static function new(): self
     {
