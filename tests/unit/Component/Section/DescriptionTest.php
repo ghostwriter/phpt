@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\Section;
 
-use Ghostwriter\Phpt\Component\Section\CreditSection;
+use Ghostwriter\Phpt\Component\Section\Description;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
-#[CoversClass(CreditSection::class)]
-final class CreditSectionTest extends TestCase
+#[CoversClass(Description::class)]
+final class DescriptionTest extends AbstractTestCase
 {
     public function testExample(): void
     {
