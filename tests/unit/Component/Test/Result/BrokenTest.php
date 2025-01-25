@@ -6,10 +6,10 @@ namespace Tests\Unit\Component\Test\Result;
 
 use Ghostwriter\Phpt\Component\Test\Result\Broken;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
 #[CoversClass(Broken::class)]
-final class BrokenTest extends TestCase
+final class BrokenTest extends AbstractTestCase
 {
     public function testExample(): void
     {
