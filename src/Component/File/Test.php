@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ghostwriter\Phpt\Component\File;
 
-final class TestFile implements TestFileInterface
+final class Test implements TestInterface
 {
     public function __construct() {}
 }
