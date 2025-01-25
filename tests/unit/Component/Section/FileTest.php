@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\Section;
 
-use Ghostwriter\Phpt\Component\Section\SkipIfSection;
+use Ghostwriter\Phpt\Component\Section\File;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
-#[CoversClass(SkipIfSection::class)]
-final class SkipIfSectionTest extends TestCase
+#[CoversClass(File::class)]
+final class FileTest extends AbstractTestCase
 {
     public function testExample(): void
     {
