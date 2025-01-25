@@ -6,10 +6,10 @@ namespace Tests\Unit\Component\Test\Result;
 
 use Ghostwriter\Phpt\Component\Test\Result\XLeaked;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
 #[CoversClass(XLeaked::class)]
-final class XLeakedTest extends TestCase
+final class XLeakedTest extends AbstractTestCase
 {
     public function testExample(): void
     {
