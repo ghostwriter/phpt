@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\Section;
 
-use Ghostwriter\Phpt\Component\Section\FileSection;
+use Ghostwriter\Phpt\Component\Section\Expect;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
-#[CoversClass(FileSection::class)]
-final class FileSectionTest extends TestCase
+#[CoversClass(Expect::class)]
+final class ExpectTest extends AbstractTestCase
 {
     public function testExample(): void
     {
