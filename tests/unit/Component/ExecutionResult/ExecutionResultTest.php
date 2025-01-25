@@ -6,10 +6,10 @@ namespace Tests\Unit\Component\ExecutionResult;
 
 use Ghostwriter\Phpt\Component\ExecutionResult\ExecutionResult;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
 #[CoversClass(ExecutionResult::class)]
-final class ExecutionResultTest extends TestCase
+final class ExecutionResultTest extends AbstractTestCase
 {
     public function testExample(): void
     {
