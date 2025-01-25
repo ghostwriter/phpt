@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\File;
 
-use Ghostwriter\Phpt\Component\File\PhpFile;
+use Ghostwriter\Phpt\Component\File\Diff;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
-#[CoversClass(PhpFile::class)]
-final class PhpFileTest extends TestCase
+#[CoversClass(Diff::class)]
+final class DiffTest extends AbstractTestCase
 {
     public function testExample(): void
     {
