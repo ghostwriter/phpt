@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Ghostwriter\Phpt\Component\Test\Case;
 
-use Ghostwriter\Phpt\Component\Section\CreditSection;
-use Ghostwriter\Phpt\Component\Section\DescriptionSection;
-use Ghostwriter\Phpt\Component\Section\ExpectSection;
-use Ghostwriter\Phpt\Component\Section\FileSection;
-use Ghostwriter\Phpt\Component\Section\SkipIfSection;
-use Ghostwriter\Phpt\Component\Section\TestSection;
+use Ghostwriter\Phpt\Component\Section\Credit;
+use Ghostwriter\Phpt\Component\Section\Description;
+use Ghostwriter\Phpt\Component\Section\Expect;
+use Ghostwriter\Phpt\Component\Section\File;
+use Ghostwriter\Phpt\Component\Section\SkipIf;
+use Ghostwriter\Phpt\Component\Section\Test;
 use Ghostwriter\Phpt\Component\Test\TestCase\PhptTestCaseInterface;
 use WeakMap;
 
@@ -19,14 +19,7 @@ final readonly class PhptCase implements PhptCaseInterface
         private PhptTestCaseInterface $phptTestCase,
         private WeakMap $weakMap,
     ) {
-        [
-            CreditSection::new(),
-            DescriptionSection::new(),
-            ExpectSection::new(),
-            FileSection::new(),
-            SkipIfSection::new(),
-            TestSection::new(),
-        ];
+        [Credit::new(), Description::new(), Expect::new(), File::new(), SkipIf::new(), Test::new()];
     }
 
     public static function new(): self
