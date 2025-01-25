@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\Section;
 
-use Ghostwriter\Phpt\Component\Section\ExpectSection;
+use Ghostwriter\Phpt\Component\Section\SkipIf;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
-#[CoversClass(ExpectSection::class)]
-final class ExpectSectionTest extends TestCase
+#[CoversClass(SkipIf::class)]
+final class SkipIfTest extends AbstractTestCase
 {
     public function testExample(): void
     {
