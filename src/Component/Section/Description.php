@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ghostwriter\Phpt\Component\Section;
 
-final class FileSection implements FileSectionInterface
+final class Description implements DescriptionInterface
 {
     public static function new(): self
     {
