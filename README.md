@@ -3,8 +3,6 @@
 [![Automation](https://github.com/ghostwriter/phpt/actions/workflows/automation.yml/badge.svg)](https://github.com/ghostwriter/phpt/actions/workflows/automation.yml)
 [![Supported PHP Version](https://badgen.net/packagist/php/ghostwriter/phpt?color=8892bf)](https://www.php.net/supported-versions)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/ghostwriter?label=Sponsor+@ghostwriter/phpt&logo=GitHub+Sponsors)](https://github.com/sponsors/ghostwriter)
-[![Code Coverage](https://codecov.io/gh/ghostwriter/phpt/branch/main/graph/badge.svg)](https://codecov.io/gh/ghostwriter/phpt)
-[![Latest Version on Packagist](https://badgen.net/packagist/v/ghostwriter/phpt)](https://packagist.org/packages/ghostwriter/phpt)
 [![Downloads](https://badgen.net/packagist/dt/ghostwriter/phpt?color=blue)](https://packagist.org/packages/ghostwriter/phpt)
 
 work in progress
