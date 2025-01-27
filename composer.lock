@@ -1325,12 +1325,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "46fcc46e983019f2699f5750a5a19093789e1fbc"
+                "reference": "f575fb99bfd31735ee627da18ef146b09b73b645"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/46fcc46e983019f2699f5750a5a19093789e1fbc",
-                "reference": "46fcc46e983019f2699f5750a5a19093789e1fbc",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/f575fb99bfd31735ee627da18ef146b09b73b645",
+                "reference": "f575fb99bfd31735ee627da18ef146b09b73b645",
                 "shasum": ""
             },
             "require": {
@@ -1401,7 +1401,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-22T08:12:16+00:00"
+            "time": "2025-01-26T23:04:54+00:00"
         },
         {
             "name": "ghostwriter/handrail",
@@ -4884,7 +4884,7 @@
     "platform": {
         "php": ">=8.4"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.4.999"
     },
