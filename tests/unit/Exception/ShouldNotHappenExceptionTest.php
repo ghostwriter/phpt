@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Tests\Unit\Exception;
 
 use Ghostwriter\Phpt\Exception\ShouldNotHappenException;
-use Ghostwriter\Phpt\Interface\ExceptionInterface;
+use Ghostwriter\Phpt\ExceptionInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
 #[CoversClass(ShouldNotHappenException::class)]
-final class ShouldNotHappenExceptionTest extends TestCase
+final class ShouldNotHappenExceptionTest extends AbstractTestCase
 {
     public function testImplementsExceptionInterface(): void
     {
