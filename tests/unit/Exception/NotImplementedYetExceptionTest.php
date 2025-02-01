@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Tests\Unit\Exception;
 
 use Ghostwriter\Phpt\Exception\NotImplementedYetException;
-use Ghostwriter\Phpt\Interface\ExceptionInterface;
+use Ghostwriter\Phpt\ExceptionInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
+use Tests\Unit\AbstractTestCase;
 
 #[CoversClass(NotImplementedYetException::class)]
-final class NotImplementedYetExceptionTest extends TestCase
+final class NotImplementedYetExceptionTest extends AbstractTestCase
 {
     public function testImplementsExceptionInterface(): void
     {
