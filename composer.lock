@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "915a56604e26c03b0580692ed5862954",
+    "content-hash": "c0a3afc05076325f17ae6145856def80",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -1319,12 +1319,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "3ea929a51fe02b1ea0abc6c1f0c07d5b4f915b03"
+                "reference": "ba3bb4d876b0a78bcc309d034124df20f5dd58ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/3ea929a51fe02b1ea0abc6c1f0c07d5b4f915b03",
-                "reference": "3ea929a51fe02b1ea0abc6c1f0c07d5b4f915b03",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/ba3bb4d876b0a78bcc309d034124df20f5dd58ca",
+                "reference": "ba3bb4d876b0a78bcc309d034124df20f5dd58ca",
                 "shasum": ""
             },
             "require": {
@@ -1420,7 +1420,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-25T16:53:32+00:00"
+            "time": "2025-02-26T16:46:33+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
