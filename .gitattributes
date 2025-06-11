@@ -4,6 +4,7 @@
 *.php text eol=lf diff=php
 *.phpt text eol=lf diff=php
 /.editorconfig export-ignore
+/.envrc export-ignore
 /.gitattributes export-ignore
 /.github export-ignore
 /.gitignore export-ignore
