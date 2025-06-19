@@ -8,15 +8,20 @@ use Composer\Autoload\ClassLoader;
 $classLoader = require \dirname(__DIR__) . \DIRECTORY_SEPARATOR . 'vendor' . \DIRECTORY_SEPARATOR . 'autoload.php';
 
 if (! $classLoader instanceof ClassLoader) {
+    /** @psalm-suppress UncaughtThrowInGlobalScope */
     throw new \RuntimeException('Class loader not found');
 }
 
-$fixturePath = __DIR__ . \DIRECTORY_SEPARATOR . 'fixture';
+ini_set('memory_limit', '-1');
 
-// when test fixtures have a single namespace (e.g. Tests\Fixture)
-$classLoader->addPsr4('Tests\\Fixture\\', $fixturePath);
+$path = __DIR__ . \DIRECTORY_SEPARATOR . 'Fixture';
 
-// when test fixtures have multiple namespaces
-$classLoader->addPsr4('', $fixturePath);
+if (\is_dir($path)) {
+    /** @psalm-suppress UncaughtThrowInGlobalScope */
+    $classLoader->addPsr4('', $path);
+
+    /** @psalm-suppress UncaughtThrowInGlobalScope */
+    $classLoader->addPsr4('Tests\\Fixture\\', $path);
+}
 
 return $classLoader;
