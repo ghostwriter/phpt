@@ -3,7 +3,6 @@
   "description": "[WIP] Testing Framework for PHP"
   "homepage": "https://github.com/ghostwriter/phpt"
   "topics": "ghostwriter, phpt"
-  "private": false
   "has_issues": true
   "has_projects": false
   "has_wiki": false
