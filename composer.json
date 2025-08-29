@@ -1,5 +1,5 @@
 {
-    "name": "ghostwriter/phpt",
+    "name": "phpt/phpt",
     "description": "Testing Framework for PHP",
     "license": "BSD-4-Clause",
     "type": "library",
