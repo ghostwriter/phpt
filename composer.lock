@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aec7732f2835a1fc2725062fcefba29e",
+    "content-hash": "ac42a64a614e1fafde967ded8ce59d64",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -2354,12 +2354,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "9c059fac356bff97d94130ecdbeef8a4bf8dba44"
+                "reference": "7d9c18e561bdadb1332efda2734c6d3bc86ea0ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/9c059fac356bff97d94130ecdbeef8a4bf8dba44",
-                "reference": "9c059fac356bff97d94130ecdbeef8a4bf8dba44",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/7d9c18e561bdadb1332efda2734c6d3bc86ea0ee",
+                "reference": "7d9c18e561bdadb1332efda2734c6d3bc86ea0ee",
                 "shasum": ""
             },
             "require": {
@@ -2516,7 +2516,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-29T08:40:12+00:00"
+            "time": "2025-09-01T12:21:09+00:00"
         },
         {
             "name": "ghostwriter/option",
