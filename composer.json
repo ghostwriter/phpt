@@ -111,8 +111,8 @@
     },
     "extra": {
         "thanks": {
-            "url": "https://github.com/ghostwriter/phpt",
-            "name": "phpt/phpt"
+            "name": "phpt/phpt",
+            "url": "https://github.com/ghostwriter/phpt"
         }
     }
 }
