@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\Runner;
 
-use Ghostwriter\Phpt\Component\Runner\Runner;
+use Ghostwriter\PHPt\Component\Runner\Runner;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

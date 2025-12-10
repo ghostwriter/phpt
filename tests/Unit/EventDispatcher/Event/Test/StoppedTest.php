@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\EventDispatcher\Event\Test;
 
-use Ghostwriter\Phpt\EventDispatcher\Event\Test\Stopped;
+use Ghostwriter\PHPt\EventDispatcher\Event\Test\Stopped;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

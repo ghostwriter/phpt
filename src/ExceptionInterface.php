@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt;
+namespace Ghostwriter\PHPt;
 
 use Throwable;
 

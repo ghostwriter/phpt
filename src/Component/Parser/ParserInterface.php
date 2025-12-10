@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\Parser;
+namespace Ghostwriter\PHPt\Component\Parser;
 
-use Ghostwriter\Phpt\Component\File\PhptInterface;
-use Ghostwriter\Phpt\Component\Test\Case\PhptCaseInterface;
+use Ghostwriter\PHPt\Component\File\PHPtInterface;
+use Ghostwriter\PHPt\Component\Test\Case\PHPtCaseInterface;
 
 interface ParserInterface
 {
-    public function parse(PhptInterface $phpt): PhptCaseInterface;
+    public function parse(PHPtInterface $phpt): PHPtCaseInterface;
 }

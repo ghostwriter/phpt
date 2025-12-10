@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\Test\Case;
+namespace Ghostwriter\PHPt\Component\Test\Case;
 
-use Ghostwriter\Phpt\Component\Section\Credit;
-use Ghostwriter\Phpt\Component\Section\Description;
-use Ghostwriter\Phpt\Component\Section\Expect;
-use Ghostwriter\Phpt\Component\Section\File;
-use Ghostwriter\Phpt\Component\Section\SkipIf;
-use Ghostwriter\Phpt\Component\Section\Test;
-use Ghostwriter\Phpt\Component\Test\TestCase\PhptTestCaseInterface;
+use Ghostwriter\PHPt\Component\Section\Credit;
+use Ghostwriter\PHPt\Component\Section\Description;
+use Ghostwriter\PHPt\Component\Section\Expect;
+use Ghostwriter\PHPt\Component\Section\File;
+use Ghostwriter\PHPt\Component\Section\SkipIf;
+use Ghostwriter\PHPt\Component\Section\Test;
+use Ghostwriter\PHPt\Component\Test\TestCase\PHPtTestCaseInterface;
 use WeakMap;
 
-final readonly class PhptCase implements PhptCaseInterface
+final readonly class PHPtCase implements PHPtCaseInterface
 {
     public function __construct(
-        private PhptTestCaseInterface $phptTestCase,
-        private WeakMap $weakMap,
+        private PHPtTestCaseInterface $phptTestCase,
+        private WeakMap $weakMap = new WeakMap(),
     ) {
         [Credit::new(), Description::new(), Expect::new(), File::new(), SkipIf::new(), Test::new()];
     }
@@ -25,11 +25,11 @@ final readonly class PhptCase implements PhptCaseInterface
     public static function new(): self
     {
         return new self(
-            //            PhptCaseInterface::class
+            //            PHPtCaseInterface::class
         );
     }
 
-    public function testCase(): PhptTestCaseInterface
+    public function testCase(): PHPtTestCaseInterface
     {
         return $this->phptTestCase;
     }

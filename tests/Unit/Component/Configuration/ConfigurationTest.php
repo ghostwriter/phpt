@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\Configuration;
 
-use Ghostwriter\Phpt\Component\Configuration\Configuration;
+use Ghostwriter\PHPt\Component\Configuration\Configuration;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

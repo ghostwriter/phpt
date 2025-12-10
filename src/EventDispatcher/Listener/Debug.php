@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\EventDispatcher\Listener;
+namespace Ghostwriter\PHPt\EventDispatcher\Listener;
 
-use Ghostwriter\Phpt\EventDispatcher\Event\EventInterface;
+use Ghostwriter\PHPt\EventDispatcher\Event\EventInterface;
 
 use function dump;
 

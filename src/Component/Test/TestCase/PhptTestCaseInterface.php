@@ -2,22 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\Test\TestCase;
+namespace Ghostwriter\PHPt\Component\Test\TestCase;
 
-use Ghostwriter\Phpt\Component\File\FileInterface;
-use Ghostwriter\Phpt\Component\Section\SectionInterface;
-use Ghostwriter\Phpt\Component\Section\TestInterface;
+use Ghostwriter\PHPt\Component\File\FileInterface;
+use Ghostwriter\PHPt\Component\Section\SectionInterface;
+use Ghostwriter\PHPt\Component\Section\TestInterface;
 
-interface PhptTestCaseInterface
+interface PHPtTestCaseInterface
 {
-    /**
-     * @param iterable<FileInterface,SectionInterface> $sections
-     */
+    /** @param iterable<FileInterface,SectionInterface> $sections */
     public static function new(TestInterface $test, iterable $sections): self;
 
-    /**
-     * @return iterable<FileInterface,SectionInterface>
-     */
+    /** @return iterable<FileInterface,SectionInterface> */
     public function sections(): iterable;
 
     public function testSection(): TestInterface;

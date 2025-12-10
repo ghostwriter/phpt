@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\File;
+namespace Ghostwriter\PHPt\Component\File;
 
 interface TestInterface extends FileInterface {}

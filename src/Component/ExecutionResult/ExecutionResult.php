@@ -2,30 +2,40 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\ExecutionResult;
+namespace Ghostwriter\PHPt\Component\ExecutionResult;
 
-use Ghostwriter\Phpt\Component\Collection\ResultCollection;
-use Ghostwriter\Phpt\Component\Collection\ResultCollectionInterface;
-use Ghostwriter\Phpt\Component\Collection\TestCasesCollection;
-use Ghostwriter\Phpt\Component\Collection\TestCasesCollectionInterface;
+use Ghostwriter\PHPt\Component\Collection\ResultCollection;
+use Ghostwriter\PHPt\Component\Collection\ResultCollectionInterface;
+use Ghostwriter\PHPt\Component\Collection\TestCaseCollection;
+use Ghostwriter\PHPt\Component\Collection\TestCaseCollectionInterface;
 use Override;
 
-final class ExecutionResult implements ExecutionResultInterface
+final readonly class ExecutionResult implements ExecutionResultInterface
 {
-    public static function new(): self
-    {
-        return new self();
+    public function __construct(
+        private ResultCollectionInterface $resultCollection,
+        private TestCaseCollectionInterface $testCaseCollection,
+    ) {}
+
+    public static function new(
+        ?ResultCollectionInterface $resultCollection = null,
+        ?TestCaseCollectionInterface $testCaseCollection = null,
+    ): self {
+        return new self(
+            $resultCollection ?? ResultCollection::new(),
+            $testCaseCollection ?? TestCaseCollection::new(),
+        );
     }
 
     #[Override]
-    public function results(): ResultCollectionInterface
+    public function resultCollection(): ResultCollectionInterface
     {
-        return ResultCollection::new();
+        return $this->resultCollection;
     }
 
     #[Override]
-    public function testCases(): TestCasesCollectionInterface
+    public function testCaseCollection(): TestCaseCollectionInterface
     {
-        return TestCasesCollection::new();
+        return $this->testCaseCollection;
     }
 }

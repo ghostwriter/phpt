@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\Test\Result;
+namespace Ghostwriter\PHPt\Component\Test\Result;
 
-use Ghostwriter\Phpt\Component\Test\ResultInterface;
-use Ghostwriter\Phpt\Component\Test\TestCaseInterface;
+use Ghostwriter\PHPt\Component\Test\ResultInterface;
+use Ghostwriter\PHPt\Component\Test\TestCaseInterface;
 
 interface XLeakedInterface extends ResultInterface
 {

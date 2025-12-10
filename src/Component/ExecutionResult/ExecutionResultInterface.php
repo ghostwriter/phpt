@@ -2,14 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\ExecutionResult;
+namespace Ghostwriter\PHPt\Component\ExecutionResult;
 
-use Ghostwriter\Phpt\Component\Collection\ResultCollectionInterface;
-use Ghostwriter\Phpt\Component\Collection\TestCasesCollectionInterface;
+use Ghostwriter\PHPt\Component\Collection\ResultCollectionInterface;
+use Ghostwriter\PHPt\Component\Collection\TestCaseCollectionInterface;
 
 interface ExecutionResultInterface
 {
-    public function results(): ResultCollectionInterface;
+    public function resultCollection(): ResultCollectionInterface;
 
-    public function testCases(): TestCasesCollectionInterface;
+    public function testCaseCollection(): TestCaseCollectionInterface;
+    //    public function results(): ResultCollectionInterface;
+    //
+    //    public function testCases(): TestCaseCollectionInterface;
 }

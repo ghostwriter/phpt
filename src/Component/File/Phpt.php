@@ -2,21 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\File;
+namespace Ghostwriter\PHPt\Component\File;
 
-use Ghostwriter\Phpt\Component\Section\CreditInterface;
-use Ghostwriter\Phpt\Component\Section\SectionInterface;
+use Ghostwriter\PHPt\Component\Section\CreditInterface;
+use Ghostwriter\PHPt\Component\Section\SectionInterface;
 use Override;
 use RuntimeException;
 use WeakMap;
 
 use function file_get_contents;
 
-final readonly class Phpt implements PhptInterface
+final readonly class PHPt implements PHPtInterface
 {
-    /**
-     * @var WeakMap<FileInterface,SectionInterface>
-     */
+    /** @var WeakMap<FileInterface,SectionInterface> */
     private WeakMap $weakMap;
 
     private function __construct(

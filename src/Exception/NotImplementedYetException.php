@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Exception;
+namespace Ghostwriter\PHPt\Exception;
 
-use Ghostwriter\Phpt\ExceptionInterface;
+use Ghostwriter\PHPt\ExceptionInterface;
 use LogicException;
 
 final class NotImplementedYetException extends LogicException implements ExceptionInterface {}

@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\Test\TestCase;
 
-use Ghostwriter\Phpt\Component\Test\TestCase\PhptTestCase;
+use Ghostwriter\PHPt\Component\Test\TestCase\PHPtTestCase;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 
-#[CoversClass(PhptTestCase::class)]
-final class PhptTestCaseTest extends AbstractTestCase
+#[CoversClass(PHPtTestCase::class)]
+final class PHPtTestCaseTest extends AbstractTestCase
 {
     public function testExample(): void
     {

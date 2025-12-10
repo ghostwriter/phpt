@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Exception;
 
-use Ghostwriter\Phpt\Exception\NotImplementedYetException;
-use Ghostwriter\Phpt\ExceptionInterface;
+use Ghostwriter\PHPt\Exception\NotImplementedYetException;
+use Ghostwriter\PHPt\ExceptionInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

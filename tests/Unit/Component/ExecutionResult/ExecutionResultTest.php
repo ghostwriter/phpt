@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\ExecutionResult;
 
-use Ghostwriter\Phpt\Component\ExecutionResult\ExecutionResult;
+use Ghostwriter\PHPt\Component\ExecutionResult\ExecutionResult;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

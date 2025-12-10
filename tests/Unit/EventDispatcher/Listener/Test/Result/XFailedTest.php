@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\EventDispatcher\Listener\Test\Result;
 
-use Ghostwriter\Phpt\EventDispatcher\Listener\Test\Result\XFailed;
+use Ghostwriter\PHPt\EventDispatcher\Listener\Test\Result\XFailed;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

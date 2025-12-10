@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\File;
+namespace Ghostwriter\PHPt\Component\File;
 
-interface PhptInterface extends FileInterface
+interface PHPtInterface extends FileInterface
 {
     public function diffFile(): DiffInterface;
 

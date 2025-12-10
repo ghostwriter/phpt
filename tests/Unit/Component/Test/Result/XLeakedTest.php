@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\Test\Result;
 
-use Ghostwriter\Phpt\Component\Test\Result\XLeaked;
+use Ghostwriter\PHPt\Component\Test\Result\XLeaked;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

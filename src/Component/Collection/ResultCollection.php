@@ -2,26 +2,33 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\Collection;
+namespace Ghostwriter\PHPt\Component\Collection;
 
-use Ghostwriter\Phpt\Component\Test\ResultInterface;
+use Ghostwriter\PHPt\Component\Test\ResultInterface;
+use OutOfBoundsException;
 use Override;
+
+use function array_key_exists;
 
 final class ResultCollection implements ResultCollectionInterface
 {
+    public function __construct(
+        private array $results = [],
+    ) {}
+
     public static function new(): self
     {
         return new self();
     }
 
-    #[Override]
-    public function add(ResultInterface $result): void {}
-
-    #[Override]
-    public function all(): iterable
-    {
-        yield from [];
-    }
+    //    #[Override]
+    //    public function add(ResultInterface $result): void {}
+    //
+    //    #[Override]
+    //    public function all(): iterable
+    //    {
+    //        yield from [];
+    //    }
 
     #[Override]
     public function broken(): iterable
@@ -39,6 +46,18 @@ final class ResultCollection implements ResultCollectionInterface
     public function failed(): iterable
     {
         yield from [];
+    }
+
+    #[Override]
+    public function get(string $id): ResultInterface
+    {
+        return $this->results[$id] ?? throw new OutOfBoundsException("Result with ID '{$id}' not found.");
+    }
+
+    #[Override]
+    public function has(string $id): bool
+    {
+        return array_key_exists($id, $this->results);
     }
 
     #[Override]
@@ -102,9 +121,21 @@ final class ResultCollection implements ResultCollectionInterface
     }
 
     #[Override]
+    public function set(string $id, ResultInterface $result): void
+    {
+        $this->results[$id] = $result;
+    }
+
+    #[Override]
     public function slow(): iterable
     {
         yield from [];
+    }
+
+    #[Override]
+    public function toArray(): array
+    {
+        return $this->results;
     }
 
     #[Override]

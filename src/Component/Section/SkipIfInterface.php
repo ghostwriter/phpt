@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\Section;
+namespace Ghostwriter\PHPt\Component\Section;
 
 interface SkipIfInterface extends SectionInterface {}

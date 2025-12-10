@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\EventDispatcher\Event;
+namespace Ghostwriter\PHPt\EventDispatcher\Event;
 
 interface EventInterface {}

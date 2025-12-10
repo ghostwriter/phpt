@@ -5,30 +5,14 @@ declare(strict_types=1);
 namespace Tests\Unit\Component\Application;
 
 use Generator;
-use Ghostwriter\Phpt\Component\Application\Application;
-use Ghostwriter\Phpt\Component\Application\ApplicationInterface;
-use Ghostwriter\Phpt\Component\Configuration\Configuration;
-use Ghostwriter\Phpt\Container\Extension\ListenerProviderExtension;
-use Ghostwriter\Phpt\Container\Factory\DebugFactory;
-use Ghostwriter\Phpt\Container\Factory\ListenerProviderFactory;
-use Ghostwriter\Phpt\Container\ServiceProvider;
-use Ghostwriter\Phpt\EventDispatcher\Event\Application\Configured;
-use Ghostwriter\Phpt\EventDispatcher\Event\Application\Finished;
-use Ghostwriter\Phpt\EventDispatcher\Event\Application\Started;
-use Ghostwriter\Phpt\EventDispatcher\Listener;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Application\Running;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Debug;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Test\Result\Broken;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Test\Result\Failed;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Test\Result\Leaked;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Test\Result\Passed;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Test\Result\Warned;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Test\Result\XFailed;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Test\Result\XLeaked;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Test\Skipped;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Test\Stopped;
-use Ghostwriter\Phpt\EventDispatcher\Listener\Test\Terminated;
-use Ghostwriter\Phpt\ExceptionInterface;
+use Ghostwriter\PHPt\Console\Application;
+use Ghostwriter\PHPt\Container\Ghostwriter\Config\ConfigurationExtension;
+use Ghostwriter\PHPt\Container\Ghostwriter\EventDispatcher\ListenerProviderExtension;
+use Ghostwriter\PHPt\Container\PHPtDefinition;
+use Ghostwriter\PHPt\EventDispatcher\Event;
+use Ghostwriter\PHPt\EventDispatcher\Listener;
+use Ghostwriter\PHPt\ExceptionInterface;
+use Ghostwriter\PHPt\Interface\Console\ApplicationInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\Unit\AbstractTestCase;
@@ -36,54 +20,57 @@ use Throwable;
 
 use function is_a;
 
+#[CoversClass(PHPtDefinition::class)]
+#[CoversClass(ConfigurationExtension::class)]
 #[CoversClass(Application::class)]
-#[CoversClass(Configuration::class)]
-#[CoversClass(Configured::class)]
-#[CoversClass(Debug::class)]
-#[CoversClass(DebugFactory::class)]
-#[CoversClass(Finished::class)]
+#[CoversClass(Listener\DebugListener::class)]
+#[CoversClass(Event\Application\Configured::class)]
+#[CoversClass(Event\Application\Finished::class)]
+#[CoversClass(Event\Application\Running::class)]
+#[CoversClass(Event\Application\Started::class)]
+#[CoversClass(Event\Test\Result\Broken::class)]
+#[CoversClass(Event\Test\Result\Failed::class)]
+#[CoversClass(Event\Test\Result\Leaked::class)]
+#[CoversClass(Event\Test\Result\Passed::class)]
+#[CoversClass(Event\Test\Result\Warned::class)]
+#[CoversClass(Event\Test\Result\XFailed::class)]
+#[CoversClass(Event\Test\Result\XLeaked::class)]
+#[CoversClass(Event\Test\Skipped::class)]
+#[CoversClass(Event\Test\Stopped::class)]
+#[CoversClass(Event\Test\Terminated::class)]
 #[CoversClass(ListenerProviderExtension::class)]
-#[CoversClass(ListenerProviderFactory::class)]
 #[CoversClass(Listener\Application\Configured::class)]
 #[CoversClass(Listener\Application\Finished::class)]
-#[CoversClass(Running::class)]
+#[CoversClass(Listener\Application\Running::class)]
 #[CoversClass(Listener\Application\Started::class)]
-#[CoversClass(Broken::class)]
-#[CoversClass(Failed::class)]
-#[CoversClass(Leaked::class)]
-#[CoversClass(Passed::class)]
-#[CoversClass(Warned::class)]
-#[CoversClass(XFailed::class)]
-#[CoversClass(XLeaked::class)]
-#[CoversClass(ServiceProvider::class)]
-#[CoversClass(Skipped::class)]
-#[CoversClass(Started::class)]
-#[CoversClass(Stopped::class)]
-#[CoversClass(Terminated::class)]
+#[CoversClass(Listener\Test\Result\Broken::class)]
+#[CoversClass(Listener\Test\Result\Failed::class)]
+#[CoversClass(Listener\Test\Result\Leaked::class)]
+#[CoversClass(Listener\Test\Result\Passed::class)]
+#[CoversClass(Listener\Test\Result\Warned::class)]
+#[CoversClass(Listener\Test\Result\XFailed::class)]
+#[CoversClass(Listener\Test\Result\XLeaked::class)]
+#[CoversClass(Listener\Test\Skipped::class)]
+#[CoversClass(Listener\Test\Stopped::class)]
+#[CoversClass(Listener\Test\Terminated::class)]
 final class ApplicationTest extends AbstractTestCase
 {
-    /**
-     * @throws Throwable
-     */
-    #[DataProvider('dataProvider')]
+    /** @throws Throwable */
+    #[DataProvider('provideExampleCases')]
     public function testExample(int $exitCode, array $arguments = []): void
     {
         self::assertSame($exitCode, Application::new()->run($arguments));
     }
 
-    /**
-     * @throws Throwable
-     */
+    /** @throws Throwable */
     public function testImplementsInterface(): void
     {
         self::assertTrue(is_a(Application::class, ApplicationInterface::class, true));
         self::assertTrue(is_a(ExceptionInterface::class, Throwable::class, true));
     }
 
-    /**
-     * @return Generator<array{bool}>
-     */
-    public static function dataProvider(): Generator
+    /** @return Generator<array{bool}> */
+    public static function provideExampleCases(): iterable
     {
         yield from [
             'true' => [0, ['--help']],

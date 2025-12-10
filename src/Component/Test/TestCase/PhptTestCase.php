@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\Test\TestCase;
+namespace Ghostwriter\PHPt\Component\Test\TestCase;
 
-use Ghostwriter\Phpt\Component\Section\TestInterface;
+use Ghostwriter\PHPt\Component\Section\TestInterface;
 use Override;
 
-final readonly class PhptTestCase implements PhptTestCaseInterface
+final readonly class PHPtTestCase implements PHPtTestCaseInterface
 {
     public function __construct(
         private TestInterface $test,

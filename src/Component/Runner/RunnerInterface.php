@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\Runner;
+namespace Ghostwriter\PHPt\Component\Runner;
 
-use Ghostwriter\Phpt\Component\ExecutionResult\ExecutionResultInterface;
+use Ghostwriter\PHPt\Component\ExecutionResult\ExecutionResultInterface;
 
 interface RunnerInterface
 {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\EventDispatcher\Event\Test\Result;
 
-use Ghostwriter\Phpt\EventDispatcher\Event\Test\Result\Leaked;
+use Ghostwriter\PHPt\EventDispatcher\Event\Test\Result\Leaked;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

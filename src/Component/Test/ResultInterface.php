@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Component\Test;
+namespace Ghostwriter\PHPt\Component\Test;
 
 interface ResultInterface {}

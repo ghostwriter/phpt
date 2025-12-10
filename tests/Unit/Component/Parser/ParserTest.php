@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\Parser;
 
-use Ghostwriter\Phpt\Component\Parser\Parser;
+use Ghostwriter\PHPt\Component\Parser\Parser;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

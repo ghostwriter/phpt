@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Container\Extension;
+namespace Tests\Unit\Container\Ghostwriter\EventDispatcher;
 
-use Ghostwriter\Phpt\Container\Extension\ListenerProviderExtension;
+use Ghostwriter\PHPt\Container\Ghostwriter\EventDispatcher\ListenerProviderExtension;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

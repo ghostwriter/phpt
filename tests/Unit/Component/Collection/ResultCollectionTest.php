@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\Collection;
 
-use Ghostwriter\Phpt\Component\Collection\ResultCollection;
+use Ghostwriter\PHPt\Component\Collection\ResultCollection;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

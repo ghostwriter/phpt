@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\EventDispatcher\Listener\Application;
+namespace Ghostwriter\PHPt\EventDispatcher\Listener\Application;
 
-use Ghostwriter\Phpt\EventDispatcher\Event;
-use Ghostwriter\Phpt\EventDispatcher\Listener\ListenerInterface;
+use Ghostwriter\PHPt\EventDispatcher\Event;
+use Ghostwriter\PHPt\EventDispatcher\Listener\ListenerInterface;
 
 final class Finished implements ListenerInterface
 {

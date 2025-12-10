@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Component\Section;
 
-use Ghostwriter\Phpt\Component\Section\File;
+use Ghostwriter\PHPt\Component\Section\File;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 

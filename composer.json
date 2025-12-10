@@ -41,8 +41,9 @@
         "ghostwriter/clock": "^3.0.1",
         "ghostwriter/collection": "^2.0.0",
         "ghostwriter/config": "^2.0.1",
-        "ghostwriter/container": "^5.0.1",
-        "ghostwriter/event-dispatcher": "^5.0.3",
+        "ghostwriter/console": "^0.1.2",
+        "ghostwriter/container": "^6.0.1",
+        "ghostwriter/event-dispatcher": "^6.0.2",
         "ghostwriter/filesystem": "^0.1.2",
         "ghostwriter/json": "^3.0.1",
         "ghostwriter/shell": "^0.1.1",
@@ -58,7 +59,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Ghostwriter\\Phpt\\": "src"
+            "Ghostwriter\\PHPt\\": "src"
         }
     },
     "autoload-dev": {
@@ -73,7 +74,6 @@
     },
     "bin": [
         "bin/phpt",
-        "bin/phpt.bat",
         "bin/phpt.php"
     ],
     "config": {
@@ -94,6 +94,17 @@
         "sort-packages": true,
         "use-parent-dir": false
     },
+    "extra": {
+        "ghostwriter": {
+            "container": {
+                "definition": "Ghostwriter\\PHPt\\Container\\PHPtDefinition"
+            }
+        },
+        "thanks": {
+            "name": "phpt/phpt",
+            "url": "https://github.com/ghostwriter/phpt"
+        }
+    },
     "scripts": {
         "cache:clear": "rm -rf ./.cache/*",
         "check": ["@cache:clear", "vendor/ghostwriter/coding-standard/tools/phar/composer validate", "@test"],
@@ -108,11 +119,5 @@
         "test": ["@phpunit", "@infection"],
         "unused": "vendor/ghostwriter/coding-standard/tools/phar/composer-unused --no-interaction --ansi",
         "xdebug": "@putenv XDEBUG_MODE=coverage"
-    },
-    "extra": {
-        "thanks": {
-            "name": "phpt/phpt",
-            "url": "https://github.com/ghostwriter/phpt"
-        }
     }
 }

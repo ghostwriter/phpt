@@ -3,10 +3,9 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Phpt\Console;
+namespace Ghostwriter\PHPt\Console;
 
 use ErrorException;
-use Ghostwriter\Phpt\Component\Application\Application;
 
 use const DIRECTORY_SEPARATOR;
 use const STDERR;

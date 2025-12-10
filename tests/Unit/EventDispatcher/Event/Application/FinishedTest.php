@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\EventDispatcher\Event\Application;
 
-use Ghostwriter\Phpt\EventDispatcher\Event\Application\Finished;
+use Ghostwriter\PHPt\EventDispatcher\Event\Application\Finished;
 use PHPUnit\Framework\Attributes\CoversClass;
 use Tests\Unit\AbstractTestCase;
 
