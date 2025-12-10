@@ -1,4 +1,4 @@
-# PHPt
+# Phpt
 
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/ghostwriter?label=Sponsor+@ghostwriter/phpt&logo=GitHub+Sponsors)](https://github.com/sponsors/ghostwriter)
 [![Automation](https://github.com/ghostwriter/phpt/actions/workflows/automation.yml/badge.svg)](https://github.com/ghostwriter/phpt/actions/workflows/automation.yml)
