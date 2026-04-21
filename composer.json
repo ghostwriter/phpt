@@ -39,7 +39,7 @@
         "ghostwriter/console": "^0.1.3",
         "ghostwriter/container": "^6.1.0",
         "ghostwriter/event-dispatcher": "^6.0.2",
-        "ghostwriter/filesystem": "^0.1.2",
+        "ghostwriter/filesystem": "^0.2.0",
         "ghostwriter/json": "^3.0.1",
         "ghostwriter/shell": "^0.1.4",
         "ghostwriter/uuid": "^1.0.3"
